@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="mini_workspace_cell_item_width" >38dp</dimen>
+    <dimen name="mini_workspace_cell_item_height" >40dp</dimen>
+    
+    <dimen name="remind_week_list_item_item_height_land" >40dp</dimen>
+    <dimen name="remind_week_list_item_item_height_port" >70dp</dimen>
+</resources>

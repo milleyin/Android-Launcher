@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip" >
+
+    <ImageView
+        android:id="@+id/iv_scrollSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon" />
+
+    <SeekBar
+        android:id="@+id/seekBar_scrollSetting"
+        android:layout_width="0dip"
+        android:layout_height="9dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:progressDrawable="@drawable/ram_usage_progressbar_style"
+        android:thumb="@drawable/setting_seekbar_scroll" />
+
+    <TextView
+        android:id="@+id/tv_scrollSetting_seek"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:text="50%" />
+
+</LinearLayout>

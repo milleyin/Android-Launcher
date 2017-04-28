@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ln_remind_type"
+        android:layout_width="250dp"
+        android:background="@drawable/remind_pop_bg"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <RelativeLayout android:layout_width="fill_parent" android:background="#ecebeb" android:layout_height="40dp"  android:paddingLeft="5dp" android:paddingRight="5dp"  > 
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请设置提醒时间" android:textColor="@color/remind_text_color_enable" android:textSize="18sp" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        
+        <RadioGroup
+            android:id="@+id/remind_type_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/b1"
+            android:orientation="vertical" >
+
+<!--             <LinearLayout -->
+<!--                 android:layout_width="fill_parent" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:orientation="horizontal" > -->
+
+                <RadioButton
+                    android:id="@+id/remind_type_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:button="@drawable/radiobutton_selector"
+                    android:textColor="@color/text_color_base"
+                     android:checked="true"
+                    android:text="分钟" />
+
+                <RadioButton
+                    android:id="@+id/remind_type_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:button="@drawable/radiobutton_selector"
+                    android:textColor="@color/text_color_base"
+                    android:text="小时" />
+<!--             </LinearLayout> -->
+
+<!--             <LinearLayout -->
+<!--                 android:layout_width="fill_parent" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:orientation="horizontal" > -->
+
+                <RadioButton
+                    android:id="@+id/remind_type_day"
+                    android:layout_width="wrap_content"
+                    android:button="@drawable/radiobutton_selector"
+                    android:textColor="@color/text_color_base"
+                    android:layout_height="fill_parent"
+                    android:text="天" />
+
+                <RadioButton
+                    android:id="@+id/remind_type_week"
+                    android:button="@drawable/radiobutton_selector"
+                    android:textColor="@color/text_color_base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="周"
+                      />
+<!--             </LinearLayout> -->
+        </RadioGroup>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_horizontal" >
+            
+             <Button android:id="@+id/btn_remind_type_cancle" android:layout_width="100dp" android:layout_height="wrap_content" android:background="@drawable/btn_red_normal" android:textColor="#ffffff" android:text="取消" android:layout_marginRight="10dp" />
+             <Button android:id="@+id/btn_remind_type_ok" android:layout_width="100dp" android:layout_height="wrap_content" android:background="@drawable/btn_green_normal" android:textColor="#ffffff" android:text="确定" />
+        
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

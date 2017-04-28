@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_quick_bg"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_app_quick_add"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_marginTop="15dip"
+        android:scaleType="center"
+        android:src="@drawable/app_quick_add"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/iv_app_quick_detail"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_marginTop="15dip"
+        android:scaleType="center"
+        android:src="@drawable/app_quick_detail"
+        android:layout_weight="1"  />
+
+    <ImageView
+        android:id="@+id/iv_app_quick_delete"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_marginTop="15dip"
+        android:scaleType="center"
+        android:src="@drawable/app_quick_delete"
+        android:layout_weight="1"  />
+
+</LinearLayout>

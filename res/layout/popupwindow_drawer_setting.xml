@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingLeft="5dp"
+  android:paddingRight="5dp"
+  android:gravity="center"
+  android:background="@drawable/drawer_setting_bg1" >
+    <TextView 
+    	android:id="@+id/batch_add_textview"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingBottom="10dip"
+        android:paddingTop="20dip"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="16sp"
+    	android:singleLine="true"
+    	android:background="@drawable/list_selector"
+    	 android:textColor="@drawable/about_textview_color"
+    	android:text="批量添加" />
+    <!--<ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/line" />
+    --><TextView 
+    	android:id="@+id/new_folder_textview"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingBottom="10dip"
+        android:paddingTop="20dip"
+        android:textSize="16sp"
+    	android:singleLine="true"
+    	android:gravity="center"
+    	android:background="@drawable/list_selector"
+    	android:text="新建文件夹"
+    	android:visibility="gone" />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/line" />
+    <TextView 
+    	android:id="@+id/hide_app_textview"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingBottom="10dip"
+    	android:background="@drawable/list_selector"
+        android:paddingTop="20dip"
+        android:gravity="center"
+        android:textSize="16sp"
+    	android:singleLine="true"
+    	 android:textColor="@drawable/about_textview_color"
+    	android:text="隐藏程序" />
+</LinearLayout>

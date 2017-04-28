@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/pb_cloudapp_wait"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/progressbar_circle_bg_xml"
+            android:indeterminateDuration="600"
+            android:maxHeight="126dip"
+            android:maxWidth="126dip"
+            android:minHeight="126dip"
+            android:minWidth="126dip" />
+
+        <TextView
+            android:id="@+id/tv_cloudapp_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="正在载入..."
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_cloudapp_failed"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="加载失败，请点击重试..."
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <com.dongji.ui.ScrollLayoutTouchable
+        android:id="@+id/sl_cloudapp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.dongji.ui.ScrollLayoutTouchable>
+
+</FrameLayout>

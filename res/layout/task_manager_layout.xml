@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dp"
+    android:orientation="vertical" >
+
+    <!-- <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="5dp" >
+
+        <Button
+            android:id="@+id/third_apps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_bg_blue"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            android:text="普通进程" />
+
+        <Button
+            android:id="@+id/system_apps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_gray"
+            android:textColor="#33b5e5"
+            android:textSize="13sp"
+            android:text="系统进程" />
+    </LinearLayout> -->
+
+    <RadioGroup
+        android:id="@+id/task_mngr_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/third_apps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/task_mngr_btn_left_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="普通进程"
+            android:textColor="@drawable/drawer_text_selector"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/system_apps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/task_mngr_btn_right_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="系统进程"
+            android:textColor="@drawable/drawer_text_selector"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/listview_bg" >
+
+        <RelativeLayout
+            android:id="@+id/click_close_section"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="visible" >
+
+            <!-- <ImageView
+                android:id="@+id/close_oneClick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:padding="2dp"
+                android:src="@drawable/onekey_finish_blue" /> -->
+            <Button
+            	android:id="@+id/close_oneClick"
+            	android:layout_width="100dp"
+            	android:layout_height="40dp"
+            	android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+            	android:background="@drawable/batch_delete"
+            	android:textColor="@drawable/btn_font_selector2"
+            	android:textSize="13sp"
+            	android:text="批量关闭" />
+
+            <TextView
+                android:id="@+id/process_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"
+                android:text="进程列表" />
+
+            <TextView
+                android:id="@+id/process_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/process_test"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"
+                android:text="(1)" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/strips"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/click_close_section"
+            android:background="#d3d3d3"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ctrl_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/cancle_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg_red"
+                android:textColor="@drawable/btn_font_selector"
+                android:textSize="13sp"
+                android:text="取消" />
+
+            <Button
+                android:id="@+id/confirm_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_bg_green"
+                android:textColor="@drawable/btn_font_selector"
+                android:textSize="13sp"
+                android:text="确定" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/ctrl_layout"
+            android:layout_below="@id/strips" >
+
+            <ListView
+                android:id="@+id/app_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:cacheColorHint="#0000"
+                android:divider="#d3d3d3"
+                android:dividerHeight="1dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbarTrackVertical="@drawable/setting_checkoff"
+                android:scrollbarThumbVertical="@drawable/setting_checkon"
+                android:fadingEdge="none"
+                android:listSelector="#00000000" />
+
+            <include
+                android:id="@+id/loading_layout"
+                layout="@layout/layout_loading_progress"
+                android:visibility="visible" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

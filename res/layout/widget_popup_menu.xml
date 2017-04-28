@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_quick_bg"
+    android:orientation="horizontal">
+    
+     <ImageView
+        android:id="@+id/add_to_desktop"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_marginTop="15dip"
+        android:scaleType="center"
+        android:src="@drawable/app_quick_add"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/detail_info"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_marginTop="15dip"
+        android:scaleType="center"
+        android:src="@drawable/app_quick_detail"
+        android:visibility="gone"
+        android:layout_weight="1"  />
+
+    <ImageView
+        android:id="@+id/uninstall"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_marginTop="15dip"
+        android:scaleType="center"
+        android:src="@drawable/app_quick_delete"
+        android:visibility="gone"
+        android:layout_weight="1"  />
+
+    <!-- <LinearLayout
+        android:id="@+id/add_to_desktop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/plus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添至桌面" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="#666"/>
+    
+    <LinearLayout
+        android:id="@+id/uninstall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/finish" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卸载" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="#666"/>
+    
+    <LinearLayout
+        android:id="@+id/detail_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情" />
+    </LinearLayout> -->
+
+</LinearLayout>

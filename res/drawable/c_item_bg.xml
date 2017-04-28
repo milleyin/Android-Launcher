@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+ <corners  android:topLeftRadius="2dip"         
+     android:topRightRadius="2dip" 
+          android:bottomLeftRadius="2dip" 
+          android:bottomRightRadius="2dip"/><!-- 圆角的半径  也可以统一设置半径 android:radius="9dip"-->
+
+<padding android:left="2dp" android:right="2dp" />
+ <solid android:color="#AB000000" /> <!-- 没有描边的中间部分 -->
+</shape>
+

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<com.dongji.ui.VerScrollLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res/com.dongji.launcher"
+    android:id="@+id/verscrolllayout"
+    android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" >
+<FrameLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res/com.dongji.launcher"
+    android:id="@+id/launcherlayout"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:orientation="vertical" >
+	
+<LinearLayout
+ 	android:id="@+id/desktoplayout" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:orientation="vertical"
+	android:visibility="visible" >
+    
+<org.adw.launcher.DragLayer
+    android:id="@+id/drag_layer"
+    android:layout_width="fill_parent"
+    android:layout_weight="1"
+    android:layout_height="fill_parent">
+    
+    <!-- The workspace contains 5 screens of cells -->
+   <org.adw.launcher.Workspace
+        android:id="@+id/workspace"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        launcher:defaultScreen="1">
+        
+    </org.adw.launcher.Workspace>
+
+    <ViewStub
+        android:id="@+id/stub_drawer"
+        android:inflatedId="@+id/all_apps_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        /> 
+        <!--  
+    <LinearLayout
+    	android:id="@+id/drawer_toolbar"
+    	android:orientation="vertical"
+		android:layout_width="wrap_content"
+		
+		android:layout_height="fill_parent"
+		android:gravity="right|center_vertical"
+		android:layout_gravity="right|center_vertical">
+	    <org.adw.launcher.ActionButton
+	        android:src="@drawable/ab_empty"
+	        android:background="@drawable/rab_bg"
+	        android:scaleType="center"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/btn_rab"
+	        launcher:ident="RAB"
+	        android:layout_height="60dip" 
+            launcher:direction="vertical" 
+	        />
+	    <org.adw.launcher.ActionButton
+	        android:src="@drawable/ab_empty"
+	        android:background="@drawable/rab2_bg"
+	        android:scaleType="center"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/btn_rab2"
+	        launcher:ident="RAB2"
+	        android:layout_height="60dip" 
+            launcher:direction="vertical" 
+	        />
+        <org.adw.launcher.ActionButton
+            android:src="@drawable/ab_empty"
+            android:background="@drawable/mab_bg"
+            android:scaleType="center"
+            android:layout_height="60dip"
+            android:id="@+id/btn_mab"
+            launcher:ident="MAB"
+            android:layout_width="wrap_content" 
+            launcher:direction="vertical" 
+            />
+	    <org.adw.launcher.ActionButton
+	        android:src="@drawable/ab_empty"
+	        android:background="@drawable/lab2_bg"
+	        android:scaleType="center"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/btn_lab2"
+	        launcher:ident="LAB2"
+	        android:layout_height="60dip" 
+            launcher:direction="vertical" 
+	        />
+	    <org.adw.launcher.ActionButton
+	        android:src="@drawable/ab_empty"
+	        android:background="@drawable/lab_bg"
+	        android:scaleType="center"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/btn_lab"
+	        launcher:ident="LAB"
+	        android:layout_height="60dip" 
+            launcher:direction="vertical" 
+	        />
+    </LinearLayout>-->
+    <!-- 
+    <ImageView
+    	android:src="@drawable/home_arrows_left"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_scroll_left"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:onClick="previousScreen"/>
+    <ImageView
+    	android:src="@drawable/home_arrows_right"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_scroll_right"
+        android:layout_width="wrap_content" 
+        android:layout_gravity="top|right"
+        android:onClick="nextScreen"/>
+         -->
+         <!--  
+    <org.adw.launcher.DeleteZone
+    	android:src="@drawable/ic_delete"
+    	android:background="@drawable/delete_zone_selector"
+        android:id="@+id/delete_zone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:scaleType="center"
+        android:layout_gravity="top|center_horizontal"
+        android:visibility="invisible"
+        launcher:direction="horizontal" />-->
+    <org.adw.launcher.DockBar
+        android:id="@+id/dockbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+		android:layout_gravity="bottom|center_horizontal"
+		launcher:position="bottom"
+        >
+            <org.adw.launcher.MiniLauncher
+            android:background="@drawable/home_docbar_bg"
+            android:id="@+id/mini_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            launcher:cellWidth="50dip"
+            launcher:cellHeight="100dip"
+            launcher:cells="7"
+            launcher:orientation="horizontal"
+            android:paddingBottom="100dp"
+            android:padding="0dip"		
+            />
+        
+    </org.adw.launcher.DockBar>
+	<org.adw.launcher.DesktopIndicator
+		android:id="@+id/desktop_indicator"
+		android:layout_marginBottom="100dp"
+		android:visibility="gone"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="bottom"
+	/>
+	
+</org.adw.launcher.DragLayer>
+
+
+</LinearLayout>
+
+<RelativeLayout android:id="@+id/toplayout" android:layout_width="fill_parent" android:layout_height="@dimen/naviagtion_bar_height" android:paddingTop="5dp" android:paddingBottom="5dp" android:paddingLeft="10dp" android:paddingRight="10dp" android:background="@drawable/home_navigation_bg" >
+         
+         <LinearLayout android:layout_width="220dp" android:clickable="true" android:id="@+id/btn_search" android:layout_height="wrap_content" android:background="@drawable/navigation_search_bg" android:orientation="horizontal" android:layout_centerVertical="true"  >
+              <TextView android:id="@+id/search_text" android:layout_width="fill_parent" android:layout_weight="1" android:background="#00000000" android:layout_height="wrap_content" android:layout_marginLeft="3dp" />
+              <Button  android:clickable="false" android:focusable="false" android:background="@drawable/btn_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" />
+         </LinearLayout>
+        
+         <LinearLayout android:id="@+id/btn_setting" android:clickable="true"  android:layout_width="40px" android:layout_height="48px"  android:layout_alignParentRight="true" android:gravity="center" >
+            <Button  android:id="@+id/btn_s"  android:layout_width="23px"  android:layout_height="23px" android:background="@drawable/btn_setting" />
+        </LinearLayout>
+        
+         <LinearLayout android:id="@+id/btn_add_app" android:clickable="true" android:layout_toLeftOf="@id/btn_setting" android:layout_width="40px" android:layout_height="48px"  android:gravity="center" android:layout_marginRight="10dp"  >
+             <Button  android:id="@+id/btn_a" android:focusable="false"  android:layout_width="23px" android:layout_height="23px" android:background="@drawable/btn_add_app" />
+        </LinearLayout>
+         <!--  
+         <LinearLayout android:id="@+id/btn_mode" android:clickable="true" android:layout_toLeftOf="@id/btn_add_app" android:layout_width="40px" android:layout_height="48px"   android:gravity="center" android:layout_marginRight="10dp"  >
+              <Button android:id="@+id/btn_m"  android:layout_width="23px" android:layout_height="23px" android:background="@drawable/btn_mode" android:layout_marginRight="10dp"   />
+        </LinearLayout>
+        -->
+         <LinearLayout android:id="@+id/btn_drawer" android:clickable="true" android:layout_toLeftOf="@id/btn_add_app" android:layout_width="40px" android:layout_height="48px"  android:gravity="center" android:layout_marginRight="10dp"  >
+             <Button android:id="@+id/btn_d" android:focusable="false"  android:layout_width="24px"  android:layout_height="24px" android:background="@drawable/btn_box"  />
+        </LinearLayout>
+        
+         <LinearLayout android:id="@+id/btn_switch" android:clickable="true" android:layout_toLeftOf="@id/btn_drawer" android:layout_width="40px" android:layout_height="48px"  android:gravity="center" android:layout_marginRight="10dp"  >
+             <Button android:id="@+id/btn_sw" android:focusable="false"  android:layout_width="23px"  android:layout_height="23px"  android:background="@drawable/btn_switch"  />
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</FrameLayout>
+<include layout="@layout/layout_alldrawer" />
+</com.dongji.ui.VerScrollLayout>

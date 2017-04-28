@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:id="@+id/decipheringdialogly"
+  android:clickable="true"
+  android:focusable="true"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="center"
+  android:background="#35000000" >
+<LinearLayout
+    android:layout_width="500dp"
+    android:layout_height="200dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+      android:clickable="true"
+  android:focusable="true"
+    android:background="@drawable/dialog_bg">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="解密文件夹"/>
+    
+        <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/split"/>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入解密密码" />
+
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:password="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消" 
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_bg_red"/>
+
+        <Button
+			android:id="@+id/submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确定" 
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_bg_green"/>
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

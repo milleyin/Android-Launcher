@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingLeft="50dip"
+  android:paddingRight="50dip"
+  android:gravity="center"
+  android:background="#35000000" >
+  	<LinearLayout 
+  		android:orientation="vertical"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:paddingTop="10dip"
+  		android:paddingBottom="20dip"
+  		android:gravity="center"
+		android:background="@drawable/corner_bg1" >
+	    <EditText 
+	    	android:id="@+id/foldername_edittext"
+	    	android:layout_width="260dip"
+	    	android:layout_height="45dip"
+	    	android:paddingLeft="4dip"
+	    	android:text="新建文件夹"
+	    	android:textSize="15sp"
+	    	android:textColor="#828282"
+	    	android:singleLine="true"
+	    	android:maxLength="15"
+	    	android:background="@drawable/setting_power_edittext_bg" />
+	    <TextView 
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="1px" 
+	    	android:background="#45666666" 
+	    	android:layout_marginTop="7dip"
+	    	android:layout_marginBottom="12dp"
+	    	android:layout_marginLeft="15dip"
+	    	android:layout_marginRight="15dip" />
+	    <com.dongji.ui.ScrollLayoutTouchable 
+	    	android:id="@+id/newfolder_content" 
+	    	android:layout_width="fill_parent"  
+	    	android:layout_height="230dp" />
+	    <LinearLayout 
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:gravity="center" >
+	    	<Button 
+	    		android:id="@+id/cancelbutton"
+	    		android:layout_width="180dip"
+	    		android:layout_height="wrap_content"
+	    		android:layout_marginRight="5dip"
+	    		android:text="取消"
+	    		android:textColor="#fff"
+	    		android:gravity="center"
+	    		android:background="@drawable/btn_red_normal" />
+	    	<Button 
+	    		android:id="@+id/confirmbutton"
+	    		android:layout_width="180dip"
+	    		android:layout_height="wrap_content"
+	    		android:layout_marginLeft="5dip"
+	    		android:text="确定"
+	    		android:textColor="#fff"
+	    		android:gravity="center"
+	    		android:background="@drawable/btn_green_normal" />
+	    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

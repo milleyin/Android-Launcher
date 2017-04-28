@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/b_ln" android:layout_width="fill_parent" android:background="#35000000" android:layout_height="fill_parent" android:gravity="center"  xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:launcher="http://schemas.android.com/apk/res/com.dongji.launcher"  android:paddingLeft="20dp" android:paddingRight="20dp" >
+    
+    <FrameLayout  android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/base_layout"
+    android:background="@drawable/corner_bg1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+        
+         <LinearLayout 
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical" >
+    
+       <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_marginTop="5dp"  >
+           <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"  android:textColor="@color/text_color_base" android:textSize="20sp" android:text="添加到屏幕" android:layout_centerInParent="true" />
+       </RelativeLayout>
+             
+    <org.adw.launcher.WorkspaceMini  android:id="@+id/add_workspaceMini"
+        android:layout_width="fill_parent"
+        android:layout_height="260dp"
+        
+        launcher:defaultScreen="2">
+    </org.adw.launcher.WorkspaceMini>
+    
+    
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_marginTop="5dp"  >
+           <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点击即可添加到屏幕" android:textColor="@color/text_color_base" android:textSize="20sp" android:layout_centerInParent="true" />
+       </RelativeLayout>
+       
+     
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  >
+         
+     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_centerInParent="true" >
+        <Button android:id="@+id/btn_add_cancle" android:layout_width="120dp" android:textColor="#ffffff"  android:layout_height="wrap_content" android:text="取消" android:background="@drawable/btn_red_normal" android:layout_marginRight="15dp" />
+        <Button android:id="@+id/btn_add_ok" android:layout_width="120dp"  android:textColor="#ffffff" android:layout_height="wrap_content" android:text="完成" android:background="@drawable/btn_green_normal" />
+    </LinearLayout>
+     </RelativeLayout>
+    
+    
+</LinearLayout>
+        
+         <ImageView android:id="@+id/animation_icon" android:visibility="gone" android:src="@drawable/group_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+         
+    </FrameLayout>
+   
+
+    
+</LinearLayout>

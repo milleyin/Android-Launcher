@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/remind_pop_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+     >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       android:layout_gravity="center_horizontal"
+        >
+        
+        <RelativeLayout android:layout_width="fill_parent" android:background="#ecebeb" android:layout_height="40dp"   > 
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请选择时间" android:textColor="@color/remind_text_color_enable" android:textSize="20sp" android:layout_alignParentLeft="true"  android:layout_centerVertical="true"/>
+            
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/timePicker1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/wheel_bg" android:orientation="vertical" >
+                
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5dp" android:text="年" android:gravity="center" android:textSize="20sp" android:textStyle="bold" android:textColor="#000000" />
+                <com.dongji.ui.WheelView
+                android:id="@+id/year"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+            
+
+            <LinearLayout android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/wheel_bg" android:orientation="vertical" >
+                
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5dp" android:text="月" android:gravity="center" android:textSize="20sp" android:textStyle="bold" android:textColor="#000000" />
+                <com.dongji.ui.WheelView
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+
+           <LinearLayout android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/wheel_bg" android:orientation="vertical" >
+                
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5dp" android:text="日" android:gravity="center" android:textSize="20sp" android:textStyle="bold" android:textColor="#000000" />
+                
+                <com.dongji.ui.WheelView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="10dip" >
+
+        <Button
+            android:id="@+id/buttoncancle"
+            android:layout_width="120dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_red_normal"
+            android:layout_height="wrap_content"
+            android:text="取消" android:layout_marginRight="15dp" />
+        
+        <Button
+            android:id="@+id/buttonsure"
+            android:layout_width="120dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_green_normal"
+            android:layout_height="wrap_content"
+            android:text="确定" />
+
+    </LinearLayout>
+
+</LinearLayout>

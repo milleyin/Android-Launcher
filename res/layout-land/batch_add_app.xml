@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="fill_parent" android:id="@+id/bb_ln" android:background="#35000000" android:layout_height="fill_parent" android:gravity="center"  xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:launcher="http://schemas.android.com/apk/res/com.dongji.launcher"  android:paddingLeft="20dp" android:paddingRight="20dp" >
+    
+    <FrameLayout  android:clickable="true"
+    android:focusable="true"
+     android:background="@drawable/corner_bg1"
+    android:id="@+id/base_layout"
+    android:layout_width="fill_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content" >
+    
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" >
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" >
+                <TextView android:id="@+id/tv_batch_title" android:textColor="#666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="批量添加--选择屏幕" android:layout_centerInParent="true"/>
+                <TextView android:id="@+id/tv_batch_tip" android:textColor="@color/add_item_text_selected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10/48" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            
+            <TextView android:layout_width="fill_parent" android:layout_height="1px" android:background="#45666666" android:layout_marginBottom="10dp" />
+            
+             <org.adw.launcher.WorkspaceMiniBatch android:id="@+id/workspaceMini"
+                android:layout_width="fill_parent"
+                android:layout_height="220dp"
+                android:layout_weight="1"
+                launcher:defaultScreen="2">
+             </org.adw.launcher.WorkspaceMiniBatch>
+             <com.dongji.ui.ScrollLayoutTouchable android:id="@+id/ln_content" android:layout_width="fill_parent"  android:layout_height="230dp" ></com.dongji.ui.ScrollLayoutTouchable>
+    
+             <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+                 <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"  >
+                     <Button android:id="@+id/btn_batch_cancle" android:layout_width="120dp" android:layout_height="wrap_content" android:text="取消" android:textColor="#ffffff" android:layout_marginRight="15dp" android:background="@drawable/btn_red_normal" /> 
+                     <Button android:id="@+id/btn_batch_ok" android:layout_width="120dp" android:layout_height="wrap_content" android:text="下一步" android:textColor="#ffffff" android:background="@drawable/btn_green_2_normal"  />
+                 </LinearLayout>
+             </RelativeLayout>
+            
+        </LinearLayout>
+   
+    </FrameLayout>
+</LinearLayout>

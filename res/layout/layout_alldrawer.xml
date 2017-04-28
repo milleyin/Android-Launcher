@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.adw.launcher.AllDrawer 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/alldrawer"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:visibility="visible" >
+    <LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="@dimen/naviagtion_bar_height"
+   		android:gravity="center_vertical"
+   		android:background="@drawable/home_navigation_bg" > 
+    	<RadioGroup 
+    		android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1.0" >
+    		<RadioButton 
+    			android:id="@+id/appbutton"
+    			android:layout_width="150dip"
+    			android:layout_height="fill_parent"
+    			android:button="@null"
+    			android:text="应用"
+    			android:gravity="center"
+    			android:checked="true"
+    			android:textSize="14sp"
+    			android:background="@drawable/channel_left_button_selector" />
+    		<RadioButton 
+    			android:id="@+id/widgetbutton"
+    			android:layout_width="150dip"
+    			android:layout_height="fill_parent"
+    			android:visibility="gone"
+    			android:button="@null"
+    			android:text="组件"
+    			android:gravity="center"
+    			android:textSize="14sp"
+    			android:background="@drawable/channel_button_selector" />
+    		<RadioButton 
+    			android:id="@+id/cloudappbutton"
+    			android:layout_width="150dip"
+    			android:layout_height="fill_parent"
+    			android:button="@null"
+    			android:text="云应用"
+    			android:gravity="center"
+    			android:textSize="14sp"
+    			android:background="@drawable/channel_button_selector" />
+    		<RadioButton 
+    			android:id="@+id/taskmanagerbutton"
+    			android:layout_width="150dip"
+    			android:layout_height="fill_parent"
+    			android:button="@null"
+    			android:text="任务管理器"
+    			android:gravity="center"
+    			android:textSize="14sp"
+    			android:background="@drawable/channel_button_selector" />
+    	</RadioGroup>
+    	
+    	<!-- zy:mark -->
+    	<LinearLayout 
+    		android:id="@+id/appwidgetlayout"
+    		android:layout_width="50dip"
+    		android:layout_height="fill_parent"
+    		android:gravity="center" >
+	    	<Button 
+	    		android:id="@+id/addwidget"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_marginRight="15dip"
+	    		android:background="@drawable/btn_widget_ico"/>  
+    	</LinearLayout>
+    	
+    	<LinearLayout 
+    		android:id="@+id/sortlayout"
+    		android:layout_width="50dip"
+    		android:layout_height="fill_parent"
+    		android:gravity="center" >
+	    	<Button 
+	    		android:id="@+id/sortbutton"
+	    		android:layout_width="23dip"
+	    		android:layout_height="23dip"
+	    		android:layout_marginRight="15dip"
+	    		android:background="@drawable/app_sort_selector" />  
+    	</LinearLayout>
+    	<LinearLayout 
+    		android:id="@+id/settinglayout"
+    		android:layout_width="50dip"
+    		android:layout_height="fill_parent"
+    		android:gravity="center" >
+    		<Button 
+	    		android:id="@+id/settingbutton"
+	    		android:layout_width="23dip"
+	    		android:layout_height="23dip"
+	    		android:layout_marginRight="15dip"
+	    		android:background="@drawable/btn_setting" /> 
+    	</LinearLayout>
+    </LinearLayout>
+    <LinearLayout 
+    	android:id="@+id/drawer_contentlayout"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_weight="1.0" >
+    </LinearLayout>
+</org.adw.launcher.AllDrawer >

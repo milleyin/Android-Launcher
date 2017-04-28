@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:descendantFocusability="blocksDescendants" >
+    <org.adw.launcher.BubbleTextView 
+    	android:id="@+id/applicationinfotextview"
+ 		style="@style/WorkspaceIcon.Portrait" />
+ 	<CheckBox 
+ 		android:id="@+id/checkbox"
+ 		android:layout_width="15dip"
+ 		android:layout_height="15dip"
+ 		android:layout_gravity="bottom|right"
+ 		android:layout_marginBottom="9dip"
+ 		android:layout_marginRight="10dip"
+ 		android:button="@null"
+ 		android:background="@drawable/checkbox_selector2" />
+</FrameLayout>

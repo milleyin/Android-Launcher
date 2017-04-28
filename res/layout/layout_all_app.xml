@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:launcher="http://schemas.android.com/apk/res/com.dongji.launcher"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:paddingTop="10dip">
+    <RelativeLayout 
+    	android:id="@+id/drawer_toplayout"
+    	android:layout_width="fill_parent"
+    	android:layout_height="55dip" >
+    	<RadioGroup 
+    		android:id="@+id/app_radiogroup"
+    		android:orientation="horizontal"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_centerInParent="true">
+    		<RadioButton 
+    			android:id="@+id/allappbutton"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:text="全部应用"
+    			android:button="@null"
+    			android:textColor="@drawable/drawer_text_selector"
+    			android:gravity="center"
+    			android:checked="true"
+    			android:textSize="14sp"
+    			android:background="@drawable/radio_left_selector" />
+    		<RadioButton 
+    			android:id="@+id/recentopenbutton"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:text="最近打开"
+    			android:textSize="14sp"
+    			android:button="@null"
+    			android:textColor="@drawable/drawer_text_selector"
+    			android:gravity="center"
+    			android:background="@drawable/radio_center_selector" />
+    		<RadioButton 
+    			android:id="@+id/recentinstallbutton"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:text="最近安装"
+    			android:textSize="14sp"
+    			android:button="@null"
+    			android:textColor="@drawable/drawer_text_selector"
+    			android:gravity="center"
+    			android:background="@drawable/radio_right_selector" />
+    	</RadioGroup>
+    	<Button 
+    		android:id="@+id/recent_open_clear_button"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="10dip"
+    		android:layout_toRightOf="@id/app_radiogroup"
+    		android:layout_centerVertical="true"
+    		android:visibility="gone"
+    		android:background="@drawable/clear_cache" />
+    </RelativeLayout>
+    <LinearLayout 
+    	android:id="@+id/app_content_layout"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_weight="1">
+	</LinearLayout>
+</LinearLayout>

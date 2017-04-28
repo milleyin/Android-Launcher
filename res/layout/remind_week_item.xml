@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+     <ListView android:id="@+id/lv_remind_week" android:background="#ffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/style_my_listView" android:layout_weight="1" ></ListView>
+</LinearLayout>

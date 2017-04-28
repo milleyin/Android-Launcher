@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+		/* ** ** Copyright 2008, The Android Open Source Project ** **
+		Licensed under the Apache License, Version 2.0 (the "License"); ** you
+		may not use this file except in compliance with the License. ** You
+		may obtain a copy of the License at ** **
+		http://www.apache.org/licenses/LICENSE-2.0 ** ** Unless required by
+		applicable law or agreed to in writing, software ** distributed under
+		the License is distributed on an "AS IS" BASIS, ** WITHOUT WARRANTIES
+		OR CONDITIONS OF ANY KIND, either express or implied. ** See the
+		License for the specific language governing permissions and **
+		limitations under the License. */
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dongji.launcher"
+    android:installLocation="internalOnly"
+    android:versionCode="1"
+    android:versionName="1.1" >
+
+    <permission
+        android:name="com.android.launcher.permission.INSTALL_SHORTCUT"
+        android:description="@string/permdesc_install_shortcut"
+        android:label="@string/permlab_install_shortcut"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"
+        android:description="@string/permdesc_uninstall_shortcut"
+        android:label="@string/permlab_uninstall_shortcut"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="org.adw.launcher.permission.READ_SETTINGS"
+        android:description="@string/permdesc_read_settings"
+        android:label="@string/permlab_read_settings"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="org.adw.launcher.permission.WRITE_SETTINGS"
+        android:description="@string/permdesc_write_settings"
+        android:label="@string/permlab_write_settings"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BIND_APPWIDGET" />
+    <uses-permission android:name="org.adw.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="org.adw.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name="org.adw.launcher.LauncherApplication"
+        android:icon="@drawable/dongji_ico"
+        android:label="@string/application_name"
+        android:process="android.process.acore" >
+        <activity
+            android:name="org.adw.launcher.Launcher"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="nosensor"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+            <intent-filter>
+                 <action android:name="android.intent.action.MAIN" /> 
+                <category android:name="android.intent.category.HOME"/> 
+                <category android:name="android.intent.category.DEFAULT"/> 
+                
+                <!--<category android:name="android.intent.category.LAUNCHER" />
+            --></intent-filter>
+        </activity>
+        <activity
+            android:name="org.adw.launcher.MyLauncherSettings"
+            android:label="@string/pref_label_settings" />
+        <activity
+            android:name="org.adw.launcher.ActivityPickerActivity"
+            android:label="@string/pref_label_activities" />
+         <activity
+            android:name="org.adw.launcher.CheckVersion"
+            android:label="@string/pref_label_activities" />
+        <activity
+            android:name="org.adw.launcher.CustomShirtcutActivity"
+            android:label="@string/pref_label_shirtcuts"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.dongji.launcherwidget.weather.CitySearchDialogActivity" android:theme="@style/theme_myDialog"/>
+        <activity
+            android:name="org.adw.launcher.WallpaperChooser"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/dongji_ico"
+            android:label="@string/pick_wallpaper" >
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       <service android:name="com.dongji.service.UpdateVersionService"/>
+        <receiver android:name="com.dongji.receiver.VersionUpdateTime"/>
+        <!-- 提醒弹出框 -->
+        <activity
+            android:name="com.dongji.launcher.RemindPopActivity"
+            android:theme="@style/theme_myDialog_activity" />
+        <!-- 提醒广播接收 -->
+        <receiver android:name="com.dongji.launcher.AlarmReceiver" >
+        </receiver>
+
+        <!-- 添加应用 -->
+        <activity
+            android:name="com.dongji.launcher.AddAppActivity"
+            android:theme="@style/theme_myDialog_activity" />
+
+        <!-- 屏幕管理 -->
+        <activity
+            android:name=".ScreenManagerActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        
+        <activity 
+            android:name="org.adw.launcher.WallpaperActivity"
+            android:theme="@style/Thanslucent_NoTitle"></activity>
+
+        <service
+            android:name="com.dongji.desktopswitch.ADownloadService"
+            android:enabled="true" />
+        <!-- Enable system-default search mode for any activity in Home -->
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="*" />
+
+        <!-- Intent received used to install shortcuts from other applications -->
+        <receiver
+            android:name="org.adw.launcher.InstallShortcutReceiver"
+            android:permission="com.android.launcher.permission.INSTALL_SHORTCUT" >
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />  
+               <action android:name="android.intent.action.PACKAGE_REMOVED" />  
+              <data android:scheme="package" />  
+            </intent-filter>
+        </receiver>
+
+        <!-- Intent received used to uninstall shortcuts from other applications -->
+        <receiver
+            android:name="org.adw.launcher.UninstallShortcutReceiver"
+            android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT" >
+            <intent-filter>
+                <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- weather widget
+        <receiver android:name="com.dongji.launcherwidget.weather.Weather" android:label="动机天气" android:icon="@drawable/weather_time_ico">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+				<action android:name="android.intent.action.TIME_SET" />
+                <action android:name="com.dongji.launcher.time" />
+                 <action android:name="com.dongji.launcher.cityname"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.dongji.launcher.weather.refresh" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/weather_appwidget" />
+        </receiver> -->
+        
+        <receiver 
+            android:name="com.dongji.receiver.SystemReceiver" android:label="开关机监听">
+            <intent-filter >
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- time widget -->
+<!--         <receiver android:name="com.dongji.launcherwidget.time.Time" android:label="动机时钟" > -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> -->
+<!--                 <action android:name="android.intent.action.TIME_SET" /> -->
+<!--                 <action android:name="com.dongji.launcher.time" /> -->
+
+<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
+<!--             </intent-filter> -->
+
+<!--             <meta-data -->
+<!--                 android:name="android.appwidget.provider" -->
+<!--                 android:resource="@xml/time_appwidget" /> -->
+<!--         </receiver> -->
+
+        <!--
+			The settings provider contains Home's data, like the workspace
+			favorites
+        -->
+        <provider
+            android:name="org.adw.launcher.LauncherProvider"
+            android:authorities="org.adw.launcher.settings"
+            android:readPermission="org.adw.launcher.permission.READ_SETTINGS"
+            android:writePermission="org.adw.launcher.permission.WRITE_SETTINGS" />
+
+        <activity android:name="org.adw.launcher.catalogue.AppInfoMList" >
+        </activity>
+        
+        <!-- 友盟统计 -->
+        <meta-data android:value="50ee7b505270156c4f00007d" android:name="UMENG_APPKEY"></meta-data>
+		<meta-data android:value="dongji" android:name="UMENG_CHANNEL"/>
+        
+        
+    </application>
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <supports-screens 
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问有关GSM网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 允许一个程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> <!-- 允许程序创建模拟位置提供用于测试 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 精确定位权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    
+    
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    
+    
+    <!-- 友盟权限列表 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    
+
+</manifest>

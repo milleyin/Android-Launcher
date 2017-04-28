@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.dongji.ui.ScrollLayoutTouchable 
+		android:id="@+id/rencent_open_content" 
+		android:layout_width="fill_parent"  
+		android:layout_height="fill_parent" >
+	</com.dongji.ui.ScrollLayoutTouchable>
+	<LinearLayout 
+		android:id="@+id/bottom_clear_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="100dip"
+		android:layout_marginBottom="50dip"
+		android:layout_gravity="bottom|right"
+		android:visibility="gone" >
+		<CheckBox 
+			android:id="@+id/bottom_clear_checkbox"
+			android:layout_width="48dip"
+			android:layout_height="fill_parent"
+			android:layout_marginTop="3dip"
+			android:layout_marginBottom="3dip"
+			android:background="@drawable/checkbox_clear_selector"
+			android:button="@null" />
+		<Button 
+			android:id="@+id/bottom_clear_cancel_button"
+			android:layout_width="200dip"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dip"
+			android:text="取消"
+			android:textColor="#fff"
+			android:background="@drawable/btn_bg_red" />
+		<Button 
+		 	android:id="@+id/bottom_clear_confirm_button"
+			android:layout_width="200dip"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dip"
+			android:text="清除"
+			android:layout_gravity="center"
+			android:textColor="#fff"
+			android:background="@drawable/clear_button_select" />
+	</LinearLayout>
+</FrameLayout>

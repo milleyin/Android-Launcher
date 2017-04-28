@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/folderly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_quick_bg"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:orientation="horizontal" >
+
+         <Button
+            android:id="@+id/deciphering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/folder_deciphering" />
+
+        <Button
+            android:id="@+id/encryption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/folder_encrytion"/>
+
+        <Button
+            android:id="@+id/addapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/app_quick_add"/>
+
+        <Button
+            android:id="@+id/folderrename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/folder_rename" />
+        
+        <Button
+            android:id="@+id/folderdelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/app_quick_delete"/>
+        
+    </LinearLayout>
+</LinearLayout>

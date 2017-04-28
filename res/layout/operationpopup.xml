@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_quick_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/applictioninfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >
+            
+            <Button
+                android:id="@+id/btn_applictioninfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="false"
+                android:background="@drawable/app_quick_detail" />
+            
+            </LinearLayout>
+
+                <LinearLayout
+            android:id="@+id/changeicon"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >
+        
+
+            <Button
+                android:id="@+id/btn_changeicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:clickable="false"
+                android:background="@drawable/app_change_icon" />
+            </LinearLayout>
+
+                 <LinearLayout
+            android:id="@+id/rename"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" > 
+                
+            <Button
+                android:id="@+id/btn_rename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:clickable="false"
+                android:background="@drawable/folder_rename" />
+            </LinearLayout>
+
+                 <LinearLayout
+            android:id="@+id/uninstall"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >  
+                 
+            <Button
+                android:id="@+id/btn_uninstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:clickable="false"
+                android:background="@drawable/app_uninstall" />
+            </LinearLayout>
+
+                 <LinearLayout
+            android:id="@+id/appdelete"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >  
+                 
+            <Button
+                android:id="@+id/btn_appdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:clickable="false"
+                android:background="@drawable/app_quick_delete" />
+            
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/folderly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_quick_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+                    <LinearLayout
+            android:id="@+id/deciphering"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone"  >
+            
+            <Button
+                android:id="@+id/btn_deciphering"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:clickable="false"
+                android:background="@drawable/folder_deciphering"/>
+            
+            </LinearLayout>
+            
+                            <LinearLayout
+            android:id="@+id/encryption"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_encryption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:clickable="false"
+                android:background="@drawable/folder_encrytion" />
+            
+            </LinearLayout>
+            
+                                    <LinearLayout
+            android:id="@+id/addapp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_addapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:clickable="false"
+                android:background="@drawable/app_quick_add" />
+            </LinearLayout>
+            
+                                            <LinearLayout
+            android:id="@+id/folderrename"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_folderrename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:clickable="false"
+                android:background="@drawable/folder_rename" />
+            </LinearLayout>
+            
+         <LinearLayout
+            android:id="@+id/folderdelete"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_folderdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                 android:clickable="false"
+                android:background="@drawable/app_quick_delete" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/appwidgetly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_delete_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+         
+                    <LinearLayout
+            android:id="@+id/appwidgetdelete"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_appwidgetdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:clickable="false"
+                android:background="@drawable/app_uninstall" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>

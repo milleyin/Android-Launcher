@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_popup_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center" >
+
+        <EditText
+            android:id="@+id/etCustomPowerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/setting_power_edittext_bg"
+            android:hint="@string/et_hint_custompower" >
+        </EditText>
+
+        <ImageView
+            android:id="@+id/ivCustomPowerClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:padding="10dip"
+            android:src="@drawable/setting_close" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gvCustomPowerQuickSetting"
+        android:layout_width="310dip"
+        android:layout_height="wrap_content"
+        android:numColumns="4" >
+    </GridView>
+
+    <ListView
+        android:id="@+id/lvCustomPowerScrollSetting"
+        android:layout_width="310dip"
+        android:layout_height="wrap_content"
+        android:padding="10dip" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="280dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="20dip" >
+
+        <Button
+            android:id="@+id/btnCustomPowerCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_red_normal"
+            android:text="@string/btnCancel"
+            android:textColor="@drawable/btn_font_selector" />
+
+        <Button
+            android:id="@+id/btnCustomPowerSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_green_normal"
+            android:text="@string/btnSave"
+            android:textColor="@drawable/btn_font_selector" />
+    </LinearLayout>
+
+</LinearLayout>

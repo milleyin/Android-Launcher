@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical" >
+    
+    <LinearLayout android:layout_width="300dp" android:layout_height="320dp" android:orientation="vertical" android:background="@drawable/remind_pop_bg" >
+        
+        <RelativeLayout android:layout_width="fill_parent" android:background="#ecebeb" android:layout_height="40dp"   >
+            <LinearLayout  android:id="@+id/btn_pre_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:clickable="true"  android:layout_centerVertical="true" android:layout_alignParentLeft="true"  >
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="false" android:focusable="false"  android:background="@drawable/arrow_grey_left" />
+                <TextView android:text="上个月" android:layout_width="wrap_content" android:textColor="@color/remind_text_color_normal" android:layout_height="wrap_content" />
+            </LinearLayout> 
+            
+            <LinearLayout  android:id="@+id/btn_next_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_alignParentRight="true" android:layout_centerVertical="true" >
+                 <TextView android:text="下个月" android:layout_width="wrap_content" android:textColor="@color/remind_text_color_normal" android:layout_height="wrap_content" />
+                 <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="false" android:focusable="false"  android:background="@drawable/arrow_grey_right" />
+            </LinearLayout>
+            
+            <TextView android:id="@+id/tv_month_title" android:layout_width="wrap_content" android:textSize="18sp" android:layout_height="wrap_content" android:layout_centerInParent="true" android:text="2012-11" android:textColor="@color/text_color_base" />
+        </RelativeLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+           
+        </LinearLayout>
+        
+        <com.dongji.ui.ScrollLayout android:id="@+id/month_scroller" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1">
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"  /> 
+        <ListView android:id="@+id/lv_month_week"  android:listSelector="@drawable/list_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/style_my_listView" android:background="#f5f5f5" ></ListView>
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"  />
+    </com.dongji.ui.ScrollLayout>
+    
+    </LinearLayout>
+    
+   
+
+</LinearLayout>

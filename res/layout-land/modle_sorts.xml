@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal"
+    android:background="@drawable/mode_select_bg"
+    android:gravity="center"
+     android:paddingTop="5dp"
+    >
+
+    <ImageView
+        android:id="@+id/general"
+        android:layout_width="wrap_content"
+         android:gravity="center"
+        android:layout_height="wrap_content"
+       
+   android:paddingRight="10dp"
+        android:src="@drawable/general_btn_bg" />
+
+     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/setting_split" />
+    <ImageView   android:id="@+id/bustling" 
+         android:gravity="center"
+        android:layout_width="50dip" android:layout_height="wrap_content" 
+        android:src="@drawable/bustling_btn_bg"/>
+     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/setting_split" />
+    <ImageView   android:id="@+id/custom" android:layout_width="wrap_content" 
+         android:gravity="center"
+           android:paddingLeft="10dp"
+        android:layout_height="wrap_content" android:src="@drawable/customer_btn_bg"/>
+</LinearLayout>

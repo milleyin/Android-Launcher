@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+     <LinearLayout android:layout_width="300dp" android:layout_height="wrap_content"  android:background="#ffffff" android:orientation="vertical" >
+    
+    <TextView android:layout_width="fill_parent" android:gravity="center" android:text="请选择联系人" android:textSize="20sp" android:layout_height="wrap_content" android:background="#454545" android:textColor="#ffffff" />
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button android:id="@+id/btn_all_contact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="全部联系人" /> 
+        
+        <Button android:id="@+id/btn_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="分组"/>
+        
+    </LinearLayout>
+
+   <ListView android:id="@+id/lv_partake_contact" android:layout_width="fill_parent" android:layout_height="400dp" android:layout_weight="1" style="@style/style_my_listView" />
+   
+     <ExpandableListView
+    	                android:visibility="gone"
+                android:id="@+id/group_expandableListView"
+                style="@style/style_my_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="400dp"
+                android:layout_weight="1"
+                android:groupIndicator="@null" >
+            </ExpandableListView>
+   
+       <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        
+        <Button android:id="@+id/btn_partake_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"/>
+        
+        <Button android:id="@+id/btn_partake_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"/>
+        
+    </LinearLayout>
+    
+   </LinearLayout>
+       
+</LinearLayout>

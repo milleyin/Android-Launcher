@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="center"
+  android:focusable="true"
+  android:clickable="true"
+  android:id="@+id/folderopertiondialogly"
+  android:background="#35000000" >
+<LinearLayout
+    android:layout_width="500dp"
+    android:layout_height="260dp"
+    android:gravity="center"
+    android:orientation="vertical"
+      android:focusable="true"
+  android:clickable="true"
+    android:background="@drawable/dialog_bg" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/folder_sort_normal"
+                android:layout_margin="10dp" />
+
+            <ImageView
+                android:id="@+id/deciphering"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@drawable/folder_deciphering_normal"
+                android:layout_margin="10dp" />
+
+            <ImageView
+                android:id="@+id/encrytion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/folder_encrytion_select"
+                android:layout_margin="10dp" />
+
+            <ImageView
+                android:id="@+id/addapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/folder_add_app_normal"
+                android:layout_margin="10dp" />
+
+            <ImageView
+                android:id="@+id/rename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/folder_rename_normal"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/split"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入加密密码" />
+
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:focusableInTouchMode="true"
+            android:password="true" />
+    </LinearLayout>
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请确定输入密码" />
+
+        <EditText
+            android:id="@+id/repwd"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:password="true"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消" 
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_bg_red"/>
+
+        <Button
+			android:id="@+id/submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确定" 
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_bg_green"/>
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

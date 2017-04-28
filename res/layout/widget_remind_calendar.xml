@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:paddingLeft="20dip"
+    android:focusable="true"
+    android:paddingRight="20dip"
+    android:paddingTop="13dip"
+    android:paddingBottom="12dip"
+    android:layout_height="fill_parent" >
+    
+    <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"  android:background="@drawable/remind_bg" android:layout_marginTop="5dp"  android:text="1" android:gravity="center"  />
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+        
+     <RelativeLayout android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/remind_calendar_top_bg" >
+ 	    <Button android:id="@+id/btn_add_remind" android:background="@drawable/btn_calendar_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+ 	    <TextView android:id="@+id/tv_title" android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_centerInParent="true" android:textColor="#ffffff" />
+ 	    <Button android:id="@+id/btn_change" android:background="@drawable/btn_change_calendar_table"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+ 	</RelativeLayout>
+ 	
+ 	<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:background="@drawable/remind_calendar_decora" />
+     
+      <com.dongji.ui.ScrollLayout android:id="@+id/sroller" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1"  >
+        <FrameLayout android:id="@+id/ln1" android:layout_width="fill_parent" android:layout_height="fill_parent" ></FrameLayout>
+        <FrameLayout android:id="@+id/ln2" android:layout_width="fill_parent" android:layout_height="fill_parent" ></FrameLayout>
+        <FrameLayout android:id="@+id/ln3" android:layout_width="fill_parent" android:layout_height="fill_parent" ></FrameLayout>
+        </com.dongji.ui.ScrollLayout>
+        	
+      <TextView android:layout_width="fill_parent" android:layout_height="7px" android:background="@drawable/remind_calendar_bottom_decora" android:layout_marginBottom="10dp" />
+      
+       <RelativeLayout android:id="@+id/ln_bottom" android:layout_width="fill_parent"  android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp" >
+                      <Button android:id="@+id/btn_pre_week" android:drawableLeft="@drawable/pre_week" android:textColor="#ffffff" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上一周" android:layout_alignParentLeft="true" android:paddingLeft="10dp"  android:background="#00000000" />
+                      <Button android:id="@+id/btn_next_week" android:drawableRight="@drawable/next_week" android:textColor="#ffffff" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下一周" android:layout_alignParentRight="true" android:paddingRight="10dp" android:background="#00000000" />
+       </RelativeLayout>
+       
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/ln_tip"  android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:gravity="center" ></LinearLayout>
+    
+</FrameLayout>

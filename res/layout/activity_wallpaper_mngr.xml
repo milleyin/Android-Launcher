@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wallpaper_mngr_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <!-- <LinearLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="@dimen/naviagtion_bar_height"
+   		android:gravity="center_vertical"
+   		android:background="@drawable/home_navigation_bg">
+        <ImageView 
+            android:id="@+id/back_img"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/btn_delete_item"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:text="壁纸设置"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:padding="40dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/static_wallpaper_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="静态壁纸"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/live_wallpaper_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动态壁纸"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/dialog_bg"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/choose_from_mapdepot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="从图库中选择"
+                android:textColor="#33b5e5"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ctrl_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <Button
+                    android:id="@+id/cancle_btn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg_red"
+                    android:text="取消"
+                    android:textColor="@drawable/btn_font_selector"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/confirm_btn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg_green"
+                    android:text="确定"
+                    android:textColor="@drawable/btn_font_selector"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/wallpaper_gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/ctrl_layout"
+                android:layout_below="@id/choose_from_mapdepot"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:visibility="visible" >
+            </GridView>
+        </RelativeLayout>
+    </LinearLayout> -->
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="@dimen/naviagtion_bar_height"
+   		android:background="@drawable/home_navigation_bg">
+        <ImageView 
+            android:id="@+id/back_img"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/back_ico"/>
+        <TextView 
+            android:layout_toRightOf="@id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:text="壁纸设置"/>
+        <TextView
+                android:id="@+id/choose_from_mapdepot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:text="从图库中选择"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/static_wallpaper_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="静态壁纸"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/live_wallpaper_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动态壁纸"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="20dp" >
+
+            
+
+            <LinearLayout
+                android:id="@+id/ctrl_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/cancle_btn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg_red"
+                    android:text="取消"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/confirm_btn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_bg_green"
+                    android:text="确定"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/wallpaper_gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/ctrl_layout"
+                android:layout_below="@id/choose_from_mapdepot"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:visibility="visible" >
+            </GridView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

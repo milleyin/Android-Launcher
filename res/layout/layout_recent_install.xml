@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.adw.launcher.DrawerWorkspace 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res/com.dongji.launcher"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    launcher:defaultScreen="1">
+</org.adw.launcher.DrawerWorkspace>

@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttr="http://schemas.android.com/apk/res/com.dongji.launcher"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_popup_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:paddingTop="5dip"
+            android:text="@string/tv_choose_wifi"
+            android:textColor="#828282"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_choose_wifi_close"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="5dip"
+            android:src="@drawable/setting_close" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="left" >
+            
+            <com.dongji.desktopswitch.SlipSwitch
+            android:id="@+id/slipswitch_wifi"
+            android:layout_width="85dip"
+            android:layout_height="30dip"
+            customAttr:mybackground="@drawable/switch_background"
+            customAttr:offBackground="@drawable/switch_off"
+            customAttr:offText="@string/switch_close"
+            customAttr:offTextColor="#000"
+            customAttr:onBackground="@drawable/switch_on"
+            customAttr:onText="@string/switch_open"
+            customAttr:onTextColor="#fff"
+            customAttr:switchState="true"
+            customAttr:textSize="12sp" />
+        </LinearLayout>
+        
+        
+        <Button
+            android:id="@+id/btn_opensystem"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:background="@drawable/setting_btn_openwifisystem"
+            android:textColor="#fff"
+            android:padding="2dip"
+            android:textSize="12sp"
+            android:text="打开网络设置" />
+    </LinearLayout>
+
+</LinearLayout>

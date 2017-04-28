@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <color name="no_back">#00000000</color>
+      
+      <color name="base_bg" >#061c28</color>
+      
+      <color name="text_color_top">#44687d</color>
+      
+      <color name="text_color_list_item">#666666</color>
+      
+      <color name="text_color_dialing_panel_big" >#515151</color>
+      <color name="text_color_dialing_panel_small" >#acacac</color>
+      
+      <color name="text_color_base" >#303030</color>
+      
+      <color name="setting_textview_bg" >#ecebeb</color>
+      
+      <color name="tip_bg_color" >#f5f5f5</color>
+      
+      <color name="line_color" >#bfbfbf</color>
+      
+      <color name="white_color">#ffffff</color>
+      
+      <color name="workspace_mini_item_selected_bg">#888888</color>
+      
+      <color name="remind_line_color" >#cecece</color>
+      
+      <color name="remind_text_color_enable" >#999999</color>
+      <color name="remind_text_color_disable" >#acacac</color>
+     
+      <color name="remind_text_color_normal" >#8c8c8c</color>
+      <color name="remind_text_color_info" >#106c96</color>
+      
+      <color name="list_selector_pressed">#e1eef3</color>
+      <color name="list_selector_normal">#ffffff</color>
+       
+      <color name="add_item_text_normal" >#919191</color>
+      <color name="add_item_text_selected" >#31addb</color> 
+</resources>

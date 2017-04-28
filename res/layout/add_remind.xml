@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:orientation="vertical" >  
+    
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#ffffff" android:orientation="vertical" android:paddingLeft="2dp" android:paddingRight="2dp" >
+       <ScrollView android:id="@+id/scrollView" android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_weight="1" >
+           <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginRight="5dp" >
+               <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" >
+              <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="5dp" >
+            <TextView android:layout_width="100dp" android:gravity="right" android:layout_height="wrap_content" android:layout_marginRight="5dp"  android:text="内容:" android:textColor="@color/remind_text_color_normal" />
+            
+            <EditText android:id="@+id/et_content"  android:textColor="@color/remind_text_color_normal" android:layout_width="fill_parent" android:layout_marginTop="5dp" android:background="@drawable/remind_edittext_bg" android:gravity="top|left" android:layout_height="wrap_content" android:lines="4" android:layout_weight="1" android:layout_marginRight="40dp" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:visibility="gone" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="5dp" >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:gravity="center_horizontal" android:text="联系人" android:textColor="@color/text_color_base" />
+            <Button android:id="@+id/btn_pick_contact" android:layout_width="150dp" android:gravity="center" android:layout_height="wrap_content" android:text="选择联系人"  />
+            <CheckBox android:id="@+id/cb_me" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我" android:textColor="@color/text_color_base" />
+        </LinearLayout> 
+        
+        <LinearLayout android:layout_width="fill_parent" android:visibility="gone" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="5dp" >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:gravity="center_horizontal" android:text="参与人" android:textColor="@color/text_color_base" />
+            <Button android:id="@+id/btn_pick_partner" android:layout_width="150dp" android:gravity="center" android:layout_height="wrap_content" android:text="选择参与人"  />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="5dp" >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:gravity="right" android:text="从:" android:textColor="@color/remind_text_color_normal" />
+            <Button android:id="@+id/btn_start_time" android:padding="5dp" android:layout_width="wrap_content"  android:background="@drawable/remind_btn"   android:textColor="@color/remind_text_color_normal"  android:layout_height="wrap_content" android:text="选 择" android:gravity="center" />
+        </LinearLayout> 
+        
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp"  >
+            
+             <LinearLayout android:layout_width="fill_parent" android:layout_alignParentLeft="true" android:layout_height="wrap_content" android:orientation="horizontal"  >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:gravity="right" android:text="到:" android:textColor="@color/remind_text_color_normal" />
+            <Button android:id="@+id/btn_end_time" android:layout_width="wrap_content"  android:padding="5dp"  android:background="@drawable/remind_btn"   android:textColor="@color/remind_text_color_normal" android:layout_height="wrap_content" android:text="选 择" android:gravity="center" />
+            
+        </LinearLayout>
+        
+            <CheckBox android:id="@+id/cb_all_day" android:layout_width="wrap_content" style="@style/MyCheckBox" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:text="全天" android:textColor="@color/text_color_base" android:layout_marginRight="40dp" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp"  >
+            
+        <LinearLayout android:id="@+id/ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginRight="5dp"  android:text="提醒:" android:gravity="right" android:textColor="@color/remind_text_color_normal" />
+            <EditText android:id="@+id/et_remind_num" android:textColor="@color/remind_text_color_normal" android:text="1" android:background="@drawable/remind_edittext_bg" android:padding="5dp" android:numeric="integer" android:layout_width="50dp" android:layout_height="wrap_content" android:singleLine="true" android:gravity="center" android:layout_marginRight="10dp" />
+        </LinearLayout>
+        
+        <Button android:id="@+id/remind_type" android:layout_toRightOf="@id/ll" android:background="@drawable/remind_btn" android:textColor="@color/remind_text_color_normal" android:layout_width="80dp" android:layout_height="wrap_content" android:text="分钟" />
+        
+        <LinearLayout  android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_alignParentRight="true" android:layout_marginRight="40dp"  >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="提醒次数:" android:gravity="right" android:textColor="@color/remind_text_color_normal" />
+            <EditText android:id="@+id/et_remind_time"  android:textColor="@color/remind_text_color_normal"  android:text="1" android:numeric="integer" android:background="@drawable/remind_edittext_bg" android:padding="5dp" android:layout_width="50dp" android:layout_height="wrap_content" android:singleLine="true" android:gravity="center" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="次" android:textColor="@color/remind_text_color_normal" android:layout_marginLeft="5dp" />
+        </LinearLayout  >
+            
+        </RelativeLayout>
+        
+        
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" >
+            
+             <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_alignParentLeft="true" >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginRight="5dp"   android:text="重复:" android:gravity="right" android:textColor="@color/remind_text_color_normal" />
+            <Button android:id="@+id/repeat_type" android:layout_width="120dp"  android:background="@drawable/remind_btn"   android:textColor="@color/remind_text_color_normal" android:layout_height="wrap_content" android:text="一次性"  />
+        </LinearLayout>
+        
+        
+        <LinearLayout android:id="@+id/repeat_rate" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal"  android:layout_alignParentRight="true" android:layout_marginRight="40dp" >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content"  android:text="重复频率:" android:gravity="right" android:textColor="@color/remind_text_color_normal" />
+            <EditText android:id="@+id/et_repeat_freq" android:textColor="@color/remind_text_color_normal" android:text="1" android:background="@drawable/remind_edittext_bg" android:padding="5dp" android:layout_marginLeft="5dp" android:numeric="integer" android:layout_width="50dp" android:layout_height="wrap_content" android:singleLine="true" android:gravity="center" />
+            <TextView android:id="@+id/repeat_rate_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="天" android:layout_marginLeft="5dp"  android:textColor="@color/remind_text_color_normal" />
+        </LinearLayout>
+        
+        </RelativeLayout>
+        
+        
+        <LinearLayout android:id="@+id/repeat_time" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="5dp" >
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:gravity="right" android:text="重复时间:" android:textColor="@color/remind_text_color_normal" />
+            
+            <LinearLayout android:id="@+id/ln_repeat_time_week" android:visibility="gone"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="5dp" android:layout_marginLeft="5dp" >
+                
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="5dp" >
+                    
+                   	<CheckBox android:id="@+id/cb_monday" android:tag="1" style="@style/MyCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="周一" android:textColor="@color/remind_text_color_normal" android:layout_marginRight="10dp" />
+                   	<CheckBox android:id="@+id/cb_tuesday" android:tag="2" style="@style/MyCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="周二" android:textColor="@color/remind_text_color_normal" android:layout_marginRight="10dp"   />
+                   	<CheckBox android:id="@+id/cb_wednesday" android:tag="3" style="@style/MyCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="周三" android:textColor="@color/remind_text_color_normal" android:layout_marginRight="10dp"   />
+                   	<CheckBox android:id="@+id/cb_thursday" android:tag="4" style="@style/MyCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="周四" android:textColor="@color/remind_text_color_normal"  android:layout_marginRight="10dp"  />
+                    
+                </LinearLayout>    
+                
+                 <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="5dp" >
+                     
+                    <CheckBox android:id="@+id/cb_friday" android:tag="5" style="@style/MyCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="周五" android:textColor="@color/remind_text_color_normal"  android:layout_marginRight="10dp"  />
+                   	<CheckBox android:id="@+id/cb_saturday" android:tag="6" style="@style/MyCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="周六" android:textColor="@color/remind_text_color_normal"  android:layout_marginRight="10dp"  />
+                   	<CheckBox  android:id="@+id/cb_sunday" android:tag="7"  style="@style/MyCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="周日" android:textColor="@color/remind_text_color_normal" android:layout_marginRight="10dp"  />
+                    
+                </LinearLayout>    
+            </LinearLayout>
+            
+            <LinearLayout android:id="@+id/ln_repeat_time_month" android:visibility="gone"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="5dp" android:layout_marginLeft="5dp" >
+                
+                        <RadioGroup
+				            android:id="@+id/repeat_time_month_rg"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:checkedButton="@+id/b1"
+				            android:orientation="vertical" >
+                   	
+                            	 <RadioButton
+				                    android:id="@+id/b_day_in_month"
+				                    android:layout_width="wrap_content"
+				                    android:layout_height="fill_parent"
+				                    android:checked="true"
+				                    android:button="@drawable/radiobutton_selector"
+				                    android:text="每月 的 第30天" android:textColor="@color/remind_text_color_normal" />
+                            	 <RadioButton
+				                    android:id="@+id/b_day_in_week_in_month"
+				                    android:layout_width="wrap_content"
+				                    android:layout_height="fill_parent"
+				                    android:button="@drawable/radiobutton_selector"
+				                    android:text="每月 最后一个星期二 " android:textColor="@color/remind_text_color_normal" />
+                            
+                            </RadioGroup>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout android:id="@+id/ln_repeat_time_range" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" >
+            <LinearLayout android:layout_width="fill_parent" android:layout_weight="1" android:gravity="left" android:layout_height="wrap_content" android:orientation="horizontal" >
+                <TextView  android:layout_width="100dp" android:layout_height="wrap_content" android:gravity="right" android:text="重复开始:" android:textColor="@color/remind_text_color_normal" android:layout_marginRight="5dp" />
+                <Button android:id="@+id/btn_repeat_start_time"  android:layout_width="wrap_content" android:background="@drawable/remind_btn" android:textColor="@color/remind_text_color_normal" android:minWidth="100dp" android:padding="5dp" android:layout_height="wrap_content" android:text="设置"   />
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent" android:layout_weight="1" android:gravity="right" android:layout_height="wrap_content" android:orientation="horizontal"  >
+                <TextView  android:layout_width="100dp" android:layout_height="wrap_content" android:gravity="right" android:text="重复结束:" android:textColor="@color/remind_text_color_normal" android:layout_marginRight="5dp" />
+                <Button android:id="@+id/btn_repeat_end_time"  android:background="@drawable/remind_btn" android:textColor="@color/remind_text_color_normal" android:padding="5dp" android:minWidth="100dp" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:text="设置" />
+            </LinearLayout>
+        </LinearLayout>
+        
+       <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="5dp" android:layout_marginTop="5dp" android:gravity="center" >
+           <Button android:id="@+id/cancel" android:layout_width="120dp" android:layout_height="wrap_content" android:text="取消" android:textColor="#ffffff" android:background="@drawable/btn_red_normal" android:layout_marginRight="15dp" />
+            <Button android:id="@+id/save" android:layout_width="120dp" android:layout_height="wrap_content" android:text="保存"  android:textColor="#ffffff" android:background="@drawable/btn_green_normal" />
+        </LinearLayout>
+         </LinearLayout>
+           </LinearLayout>
+         
+       </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

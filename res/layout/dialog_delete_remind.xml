@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <LinearLayout android:layout_width="340dp" android:layout_height="wrap_content"  android:background="@drawable/remind_pop_bg" android:orientation="vertical"  >
+        
+         <RelativeLayout android:layout_width="fill_parent" android:background="#ecebeb" android:layout_height="40dp"   > 
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="提醒详情" android:textColor="@color/remind_text_color_enable" android:textSize="20sp" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    
+          <TextView android:layout_width="1px" android:layout_height="fill_parent" android:background="#cecece" />
+          
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" >
+        
+        <TextView  android:layout_width="fill_parent" android:textColor="@color/remind_text_color_normal"  android:layout_height="wrap_content" android:gravity="center" android:textSize="18dp" android:text="确定删除该提醒?" />
+        
+    </LinearLayout>
+
+    <RadioGroup android:id="@+id/delete_radioGroup" android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:orientation="vertical" >
+           <RadioButton
+        android:id="@+id/rbtn_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:button="@drawable/radiobutton_selector"
+        android:textColor="@color/remind_text_color_normal" 
+        android:layout_marginRight="10dp"
+        android:text="仅删除此条提醒" />
+           
+              <RadioButton
+        android:id="@+id/rbtn_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/radiobutton_selector"
+        android:textColor="@color/remind_text_color_normal" 
+        android:text="删除全部提醒" />
+        
+    </RadioGroup>
+ 
+
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_gravity="center_horizontal" >
+                <Button android:id="@+id/btn_delete_cancle" android:layout_width="120dp" android:layout_height="wrap_content" android:text="取消" android:textColor="#ffffff" android:background="@drawable/btn_red_normal" android:layout_marginRight="10dp"  />
+                
+        <Button android:id="@+id/btn_delete_ok" android:layout_width="120dp" android:layout_height="wrap_content" android:text="确定" android:textColor="#ffffff" android:background="@drawable/btn_green_normal" />
+    </LinearLayout>
+        
+    </LinearLayout>
+    
+</LinearLayout>
